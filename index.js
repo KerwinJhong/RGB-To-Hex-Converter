@@ -1,16 +1,16 @@
-let input = document.querySelectorAll("input");
+let input = document.querySelectorAll("input")
 
 
 const rgbToHex = function(rgb) {
-    let hex = Number(rgb).toString(16);
+    let hex = Number(rgb).toString(16)
     if (hex.length < 2) {
-        hex = "0" + hex;
+        hex = "0" + hex
     }
-    return hex;
-};
+    return hex
+}
 
 
-document.body.style.backgroundColor = "rgb(0, 0, 0)";
+document.body.style.backgroundColor = "rgb(0, 0, 0)"
 
 for (let i = 0; i < input.length; i++) {
     input[i].addEventListener("input", function() {
@@ -20,5 +20,5 @@ for (let i = 0; i < input.length; i++) {
         const hexValue = document.getElementById("hex")
         document.body.style.backgroundColor = "rgb(" + red + ", " + green + ", " + blue + ")"
         hexValue.value = '#' + rgbToHex(red) + rgbToHex(green) + rgbToHex(blue)
-    });
+    })
 }
