@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RGB to Hex Converter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <div class="container text-center" id="win">
+        <h1 class="display-1"><span class="badge p-3 mb-2 bg-dark text-primary">RGB to Hex Converter</span></h1>
+        <div class="mt-5">
+            <div class="mb-3">
+                <h1 class="d-inline"><span class="badge bg-danger text-black">R</span></h1>
+                <input type="range" id="rRange_weight" value="0" min="0" max="255" oninput="rRange_weight_disp.value = rRange_weight.value" class="mx-3">
+                <h1 class="d-inline"><output class="badge bg-danger text-black" id="rRange_weight_disp" style="width:100px;">0</h1></output>
+            </div>
+            <div class="mb-3">
+                <h1 class="d-inline"><span class="badge bg-success text-black">G</span></h1>
+                <input type="range" id="gRange_weight" value="0" min="0" max="255" oninput="gRange_weight_disp.value = gRange_weight.value" class="mx-3">
+                <h1 class="d-inline"><output class="badge bg-success text-black" id="gRange_weight_disp" style="width:100px;">0</h1></output>
+            </div>
+            <div class="mb-3">
+                <h1 class="d-inline"><span class="badge bg-primary text-black">B</span></h1>
+                <input type="range" id="bRange_weight" value="0" min="0" max="255" oninput="bRange_weight_disp.value = bRange_weight.value" class="mx-3">
+                <h1 class="d-inline"><output class="badge bg-primary text-black" id="bRange_weight_disp" style="width:100px;">0</h1></output>
+            </div>
+            <h1><output class="badge bg-secondary text-black" id="hex" style="width:200px;">#000000</h1></output>
+        </div>
+    </div>
+    </div>
+
+    <script src="/index.js"></script>
+</body>
+
+</html>
